@@ -1,0 +1,85 @@
+-----------------------------SIMPLE FACTORY------------------------------------
+
+Na programação POO, o termo factory (fábrica) refere-se a uma classe ou método
+que é responsável por criar objetos.
+Vantagens:
+    Permitem criar um sistema com baixo acoplamento entre classes porque
+    ocultam as classes que criam os objetos do código cliente.
+    Facilitam a adição de novas classes ao código, porque o cliente não
+    conhece e nem utiliza a implementação da classe (utiliza a factory).
+    Podem facilitar o processo de "cache" ou criação de "singletons" porque a
+    fábrica pode retornar um objeto já criado para o cliente, ao invés de criar
+    novos objetos sempre que o cliente precisar.
+Desvantagens:
+    Podem introduzir muitas classes no código
+Vamos ver 2 tipos de Factory da GoF: Factory method e Abstract Factory
+Nessa aula:
+Simple Factory <- Uma espécie de Factory Method parametrizado
+Simple Factory pode não ser considerado um padrão de projeto por si só
+Simple Factory pode quebrar princípios do SOLID
+
+-----------------------------FACTORY METHOD------------------------------------
+
+Factory method é um padrão de criação que permite definir uma interface para
+criar objetos, mas deixa as subclasses decidirem quais objetos criar. O
+Factory method permite adiar a instanciação para as subclasses, garantindo o
+baixo acoplamento entre classes.
+
+-----------------------------ABSTRACT METHOD-----------------------------------
+
+Abstract Factory é um padrão de criação que fornece uma interface para criar
+famílias de objetos relacionados ou dependentes sem especificar suas classes
+concretas. Geralmente Abstract Factory conta com um ou mais Factory Methods
+para criar seus objetos.
+Uma diferença importante entre Factory Method e Abstract Factory é que o
+Factory Method usa herança, enquanto Abstract Factory usa a composição.
+Princípio: programe para interfaces, não para implementações
+
+---------------------------------BUILDER---------------------------------------
+
+Builder é um padrão de criação que tem a intenção
+de separar a construção de um objeto complexo
+da sua representação, de modo que o mesmo processo
+de construção possa criar diferentes representações.
+Builder te da a possibilidade de criar objetos passo-a-passo
+e isso já é possível no Python sem este padrão.
+Geralmente o builder aceita o encadeamento de métodos
+(method chaining).
+
+basicamente uma projeto que cria objetos mais complexos, no python nao precisa
+pois temos o class A:
+
+                  def __init__(self, firstname=None)
+                        self.firstname = firstname <---
+                        
+                        Dai quando for chamar a classe ja passa os parametros
+                        do objeto, nao precisando chamar metodos para 
+                        criacao do mesmo
+
+--------------------------------SINGLETON--------------------------------------
+
+O Singleton tem a intenção de garantir que uma classe tenha somente
+uma instância e fornece um ponto global de acesso para a mesma.
+When discussing which patterns to drop, we found
+that we still love them all.
+(Not really—I'm in favor of dropping Singleton.
+Its use is almost always a design smell.)
+- Erich Gamma, em entrevista para informIT
+http://www.informit.com/articles/article.aspx?p=1404056
+
+--------------------------------MONOSTATE--------------------------------------
+
+Monostate (ou Borg) - É uma variação do Singleton proposto
+por Alex Martelli que tem a intenção de garantir que o
+estado do objeto seja igual para todas as instâncias.
+
+--------------------------------PROTOTYPE--------------------------------------
+
+Especificar os tipos de objetos a serem criados
+usando uma instância-protótipo e criar novos objetos
+pela cópia desse protótipo
+
+USADO QUANDO UM OBJETO QUE VOCE VAI CRIAR TEM SEMELHANÇAS COM UM JA CRIADO 
+DAI FAÇA UM METODO CLONE PARA CLONAR O OBJETO CRIADO E SUBSTITUINDO APENAS 
+OS ATRIBUTOS DIFERENTES  
+
