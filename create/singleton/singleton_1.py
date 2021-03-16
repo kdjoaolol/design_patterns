@@ -16,6 +16,7 @@ class AppSettings:
       def __new__(cls, *args, **kwargs):
             if not cls._instance:
                   cls._instance = super().__new__(cls, *args, **kwargs)
+                  print('passou pelo if not')
             return cls._instance
 
 # problema nesse singleton é o init iniciado varias vezes
@@ -23,6 +24,7 @@ class AppSettings:
       def __init__(self): 
             self.tema = "o tema escuro" #comentar init pra ser singleton
             self.font = '19px'
+            print('passou pelo init')
 
 
 if __name__ == "__main__":
@@ -30,6 +32,8 @@ if __name__ == "__main__":
       as1.tema = 'o tema claro'
       print(as1.tema)
       as2 = AppSettings()
-      as2.tema = 'o tema 11claro'
+      as2.tema = 'o tema escuro'
       print(as2.tema)
       as3 = AppSettings()
+      as1.data = '25/05'
+      print(as1.data)

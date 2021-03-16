@@ -4,6 +4,7 @@ def singleton(the_class):
       def get_class(*args, **kwargs):
             if the_class not in instances:
                   instances[the_class] = the_class(*args, **kwargs)
+                  print('passou pelo get_class if not')
             return instances[the_class]
 
       return get_class

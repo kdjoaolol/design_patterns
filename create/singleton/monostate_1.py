@@ -15,9 +15,9 @@ class MonoStateSimple(StringReprMixin):
       _state: dict = {}
       
       def __init__(self, nome=None, sobrenome=None):
-            self.__dict__ = self._state
-            if nome is not None:
-                  self.nome = nome
+            self.__dict__ = self._state # por exemplo list1 = list as mudanças no list mudam no list1
+            if nome is not None:        # logo __dict__ é uma referencia de state, como state esta sendo
+                  self.nome = nome      # carregado como constante, os atts nunca mudam ja que estao carregados em self._state
             if sobrenome is not None:
                   self.sobrenome = sobrenome
             print(self.__dict__, self._state)
