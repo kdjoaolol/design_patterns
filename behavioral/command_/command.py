@@ -11,24 +11,24 @@ ação no final).
 """
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from typing import Dict
+from typing import Dict, List, Tuple
 
 class Ligth:
       # ----> RECEIVER - LUZ INTELIGENTE <---- #
       def __init__(self, name: str, room_name: str) -> None:
             self.name = name
             self.room_name = room_name
-            self.collor = 'Default color'
+            self.color = 'Default color'
 
       def on(self) -> None:
-            print(f'Light {self.name} in {self.room_name} is now ON')
+            print(f'{self.name} no {self.room_name} está ON')
       
       def off(self) -> None:
-            print(f'Light {self.name} in {self.room_name} is now OFF')
+            print(f'{self.name} no {self.room_name} está OFF')
 
       def change_color(self, color: str) -> None:
             self.color = color
-            print(f'Light {self.name} in {self.room_name} is now {self.color}')
+            print(f'{self.name} no {self.room_name} está {self.color}')
 
 class ICommand(ABC):
       # ----> INTERFACE DE COMANDO <---- #
@@ -47,12 +47,90 @@ class LigthOnCommand(ICommand):
             self.light.on()
 
       def undo(self) -> None:
-            self.ligth.off()
+            self.light.off()
+
+class LigthChangeColor(ICommand):
+      # ----> COMANDO CONCRETO <---- #
+      def __init__(self, light: Ligth, color: str) -> None:
+            self.light = light
+            self.color = color 
+            self._old_color = self.light.color
+
+      def execute(self) -> None:
+            self._old_color = self.light.color
+            self.light.change_color(self.color)
+
+      def undo(self) -> None:
+            self.light.change_color(self._old_color)
+
 
 class RemoteController:
       # ----> INVOKER <---- #
       def __init__(self) -> None:
             self._buttons: Dict[str, ICommand] = {}
+            self._undos: List[Tuple[str, str]] = []
       
       def button_add_command(self, name: str, command: ICommand) -> None:
             self._buttons[name] = command
+
+      def button_pressed(self, name: str) -> None:
+            if name in self._buttons:
+                  self._buttons[name].execute()
+                  self._undos.append((name, 'execute'))
+
+      def button_undo(self, name:str) -> None:
+            if name in self._buttons:
+                  self._buttons[name].undo()
+                  self._undos.append((name, 'undu'))
+
+      def global_undo(self) -> None:
+            if not self._undos:
+                  print('nada pra desfazer')
+                  return None
+            button_name, action = self._undos[-1]
+
+            if action == 'execute':
+                  self._buttons[button_name].undo()
+            else: 
+                  self._buttons[button_name].execute()
+            self._undos.pop()
+
+
+if __name__ == "__main__":
+
+      bedroom_light = Ligth('Luz do quarto', 'quarto')
+      bathroom_light = Ligth('Luz do banheiro', 'banheiro')
+
+      bedroom_light_on = LigthOnCommand(bedroom_light)
+      bathroom_light_on = LigthOnCommand(bathroom_light)
+      bedroom_light_blue = LigthChangeColor(bedroom_light, 'azul')
+      bedroom_light_red = LigthChangeColor(bedroom_light, 'vermelho')
+
+
+      remote = RemoteController()
+      RemoteController().button_add_command('teste', LigthChangeColor(Ligth('luz do quarto', 'quarto'), 'azul'))
+      remote.button_add_command('first_button', bedroom_light_on)
+      remote.button_add_command('secund_button', bathroom_light_on)
+      remote.button_add_command('third_button', bedroom_light_blue)
+      remote.button_add_command('fourth_button', bedroom_light_red)
+
+      remote.button_pressed('first_button')
+      remote.button_undo('first_button')
+
+      remote.button_pressed('secund_button')
+      remote.button_undo('secund_button')
+
+      remote.button_pressed('third_button')
+
+      remote.button_pressed('fourth_button')
+      remote.button_undo('fourth_button')
+
+      print()
+      remote.global_undo()
+      remote.global_undo()
+      remote.global_undo()
+      remote.global_undo()
+      remote.global_undo()
+      remote.global_undo()
+      remote.global_undo()
+      remote.global_undo()
