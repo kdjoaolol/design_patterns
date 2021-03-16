@@ -20,9 +20,9 @@ class AppSettings:
 
 # problema nesse singleton é o init iniciado varias vezes
 
-#      def __init__(self): 
-#            self.tema = "o tema escuro" #comentar init pra ser singleton
-#            self.font = '19px'
+      def __init__(self): 
+            self.tema = "o tema escuro" #comentar init pra ser singleton
+            self.font = '19px'
 
 
 if __name__ == "__main__":

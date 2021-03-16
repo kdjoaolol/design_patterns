@@ -16,11 +16,11 @@ class MonoStateSimple(StringReprMixin):
       
       def __init__(self, nome=None, sobrenome=None):
             self.__dict__ = self._state
-            print(self.__dict__, self._state)
             if nome is not None:
                   self.nome = nome
             if sobrenome is not None:
                   self.sobrenome = sobrenome
+            print(self.__dict__, self._state)
 
 
 if __name__ == "__main__":
