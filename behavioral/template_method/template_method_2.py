@@ -15,8 +15,7 @@ from abc import ABC, abstractmethod
 
 
 class Pizza(ABC):
-
-
+      
       def prepare(self) -> None:
             # ----> TEMPLATE METHOD <----#
             self.hook_before_add_ingretients()

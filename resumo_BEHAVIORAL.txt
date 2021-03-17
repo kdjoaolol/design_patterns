@@ -41,3 +41,20 @@ Também é possível definir hooks para que as subclasses
 utilizem caso necessário.
 The Hollywood principle: "Don't Call Us, We'll Call You."
 (IoC - Inversão de controle)
+
+------------------------------------STATE--------------------------------------
+
+O Padrão de projeto State é um padrão comportamental
+que tem a intenção de permitir a um objeto mudar
+seu comportamento quando o seu estado interno
+muda.
+O objeto parecerá ter mudado sua classe.
+
+--------------------------CHAIN OF RESPONSABILITY------------------------------
+
+Chain of responsibility (COR) é um padrão comportamental
+que tem a intenção de evitar o acoplamento do remetente de
+uma solicitação ao seu receptor, ao dar a mais de um objeto
+a oportunidade de tratar a solicitação.
+Encadear os objetos receptores passando a solicitação
+ao longo da cadeia até que um objeto a trate.
