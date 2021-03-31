@@ -29,6 +29,7 @@ class Singleton(type):
                   cls._instances[cls] = super().__call__(*args, **kwargs)
                   print('passou pelo if not ')
             print(cls._instances[cls])
+            print(cls)
             return cls._instances[cls]
 
 class AppSettings(metaclass=Singleton):

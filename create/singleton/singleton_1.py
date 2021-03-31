@@ -35,5 +35,5 @@ if __name__ == "__main__":
       as2.tema = 'o tema escuro'
       print(as2.tema)
       as3 = AppSettings()
-      as1.data = '25/05'
-      print(as1.data)
+      # as1.data = '25/05'
+      # print(as1.data)

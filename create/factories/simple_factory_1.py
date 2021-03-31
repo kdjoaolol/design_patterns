@@ -54,5 +54,10 @@ if __name__ == '__main__':
     carros_disponiveis = ['luxo', 'popular', 'moto']
     
     for i in range(10):
-        carro = VeiculoFactory.get_carro(choice(carros_disponiveis))
-        carro.buscar_cliente()        
+        # carro = VeiculoFactory.get_carro(choice(carros_disponiveis))
+        # carro.buscar_cliente()  
+
+        carro1 = VeiculoFactory.get_carro(choice(carros_disponiveis))
+        print(type(carro1))
+        
+        carro1.buscar_cliente()
