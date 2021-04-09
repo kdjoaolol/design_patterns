@@ -1,4 +1,4 @@
-:computer: Padrões de Projeto em Python
+# :computer: Padrões de Projeto em Python
 
 Material de estudo sobre padrões de projeto em Python com código, descrição e em pt-br :brazil:
 
@@ -34,3 +34,65 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 | [:package:][22]        | [Facade][46]        | Promove o desacoplamento da implementação com vários clientes                  |
 | [:leaves:][23]         | [Flyweight][47]     | Minimiza o uso de custos computacionais compartilhando dados entre objetos     |
 | [:8ball:][24]          | [Proxy][48]         | Um objeto agente que encapsula o objeto que está realmente servindo            |
+
+## :dancers: Contribuindo
+
+Se você tem interesse em contribuir com o projeto :heart_eyes: por favor leia o documento [CONTRIBUTING](https://github.com/kelvins/design-patterns-python/blob/master/CONTRIBUTING.md).
+
+## :book: Referências
+
+- [Curso Design Patterns Python I: Boas práticas de programação. Alura Online.](https://cursos.alura.com.br/course/design-patterns-python)
+- [Curso Design Patterns Python II: Boas práticas de programação. Alura Online.](https://cursos.alura.com.br/course/design-patterns-python-2)
+- [Aprendendo Padrões de Projeto em Python. Chetan Giridhar. Novatec.](https://novatec.com.br/livros/padroes-projeto-python/)
+- [Design Patterns for Humans](https://github.com/kamranahmedse/design-patterns-for-humans)
+- [Design Patterns: Refactoring Guru](https://refactoring.guru/design-patterns/python)
+- [Padrões de Projeto de Software](https://pt.wikipedia.org/wiki/Padr%C3%A3o_de_projeto_de_software)
+
+[1]: https://pt.wikipedia.org/wiki/Chain_of_Responsibility
+[2]: https://pt.wikipedia.org/wiki/Command
+[3]: https://pt.wikipedia.org/wiki/Interpreter
+[4]: https://pt.wikipedia.org/wiki/Iterador
+[5]: https://pt.wikipedia.org/wiki/Mediator
+[6]: https://pt.wikipedia.org/wiki/Memento_(inform%C3%A1tica)
+[7]: https://pt.wikipedia.org/wiki/Observer
+[8]: https://pt.wikipedia.org/wiki/State
+[9]: https://pt.wikipedia.org/wiki/Strategy
+[10]: https://pt.wikipedia.org/wiki/Template_Method
+[11]: https://pt.wikipedia.org/wiki/Visitor_Pattern
+[12]: https://pt.wikipedia.org/wiki/Abstract_Factory
+[13]: https://pt.wikipedia.org/wiki/Builder
+[14]: https://pt.wikipedia.org/wiki/Factory_Method
+[16]: https://pt.wikipedia.org/wiki/Prototype
+[17]: https://pt.wikipedia.org/wiki/Singleton
+[18]: https://pt.wikipedia.org/wiki/Adapter
+[19]: https://pt.wikipedia.org/wiki/Bridge_(padr%C3%A3o_de_projeto_de_software)
+[20]: https://pt.wikipedia.org/wiki/Composite
+[21]: https://pt.wikipedia.org/wiki/Decorator
+[22]: https://pt.wikipedia.org/wiki/Fa%C3%A7ade
+[23]: https://pt.wikipedia.org/wiki/Flyweight
+[24]: https://pt.wikipedia.org/wiki/Proxy_(padr%C3%B5es_de_projeto)
+
+[25]: comportamentais/chain_of_responsibility
+[26]: comportamentais/command
+[27]: comportamentais/interpreter
+[28]: comportamentais/iterator
+[29]: comportamentais/mediator
+[30]: comportamentais/memento
+[31]: comportamentais/observer
+[32]: comportamentais/state
+[33]: comportamentais/strategy
+[34]: comportamentais/template_method
+[35]: comportamentais/visitor
+[36]: criacao/abstract_factory
+[37]: criacao/builder
+[38]: criacao/factory_method
+[39]: criacao/monostate
+[40]: criacao/prototype
+[41]: criacao/singleton
+[42]: estruturais/adapter
+[43]: estruturais/bridge
+[44]: estruturais/composite
+[45]: estruturais/decorator
+[46]: estruturais/facade
+[47]: estruturais/flyweight
+[48]: estruturais/proxy
