@@ -4,17 +4,17 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 
 |                       | Padrões Comportamentais       | Se concentram nos algoritmos e atribuições de responsabilidades          |
 |-----------------------|-------------------------------|--------------------------------------------------------------------------|
-| [:link:][1]           | [Chain of Responsibility][25] | Nos permite aplicar uma lógica sequencial de forma dinâmica              |
-| [:cop:][2]            | [Command][26]                 | Executa uma sequência de comandos em cima de algum dado                  |
-| [:speech_balloon:][3] | [Interpreter][27]             | Quando precisamos interpretar diversas operações                         |
-| [:loop:][4]           | [Iterator][28]                | Uma maneira de acessar elementos de um objeto sem expor o conteúdo       |
-| [:alien:][5]          | [Mediator][29]                | Encapsula a lógica de comunicação entre um conjunto de objetos           |
-| [:floppy_disk:][6]    | [Memento][30]                 | Guardar um estado que possa ser restaurado futuramente                   |
-| [:sunglasses:][7]     | [Observer][31]                | Criar uma lista de observadores interessados pela criação de um objeto   |
-| [:anger:][8]          | [State][32]                   | Define um conjunto de estados que possui uma ordem definida              |
-| [:bulb:][9]           | [Strategy][33]                | Passa como parâmetro uma função (estratégia) para outro método           |
-| [:ledger:][10]        | [Template Method][34]         | Classes ABC que abstraem métodos em comum entre diversas classes         |
-| [:runner:][11]        | [Visitor][35]                 | Permite navegar pelos elementos de uma estrutura de dados                |
+| :link:           | [Chain of Responsibility][25] | Nos permite aplicar uma lógica sequencial de forma dinâmica              |
+| :cop:            | [Command][26]                 | Executa uma sequência de comandos em cima de algum dado                  |
+| :speech_balloon: | [Interpreter][27]             | Quando precisamos interpretar diversas operações                         |
+| [:loop:]           | [Iterator][28]                | Uma maneira de acessar elementos de um objeto sem expor o conteúdo       |
+| [:alien:]          | [Mediator][29]                | Encapsula a lógica de comunicação entre um conjunto de objetos           |
+| [:floppy_disk:]    | [Memento][30]                 | Guardar um estado que possa ser restaurado futuramente                   |
+| [:sunglasses:]     | [Observer][31]                | Criar uma lista de observadores interessados pela criação de um objeto   |
+| [:anger:]          | [State][32]                   | Define um conjunto de estados que possui uma ordem definida              |
+| [:bulb:]           | [Strategy][33]                | Passa como parâmetro uma função (estratégia) para outro método           |
+| [:ledger:]        | [Template Method][34]         | Classes ABC que abstraem métodos em comum entre diversas classes         |
+| [:runner:]        | [Visitor][35]                 | Permite navegar pelos elementos de uma estrutura de dados                |
 
 |                             | Padrões de Criação     | São aqueles que abstraem ou adiam o processo de criação dos objetos               |
 |-----------------------------|------------------------|-----------------------------------------------------------------------------------|
