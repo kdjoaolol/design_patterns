@@ -21,7 +21,7 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 | :hammer:             | Abstract Factory | Cria um ou mais métodos de fábrica para criar uma família de objetos              |
 | :construction_worker: | Builder          | Recebe parâmetros, verifica a validade e até definir parâmetros padrões           |
 | :factory:             | Factory Method   | Permite expor métodos ao cliente para criar novos objetos                         |
-| :one:                       |Monostate (Borg) | Cria mais de uma instância da classe mas todos os objetos tem o mesmo estado      |
+| :one:                 |Monostate (Borg) | Cria mais de uma instância da classe mas todos os objetos tem o mesmo estado      |
 | :sheep:               | Prototype        | O padrão prototype é um padrão utilizado basicamente para clonar objetos          |
 | :gem:                 | Singleton       | Garante que apenas um objeto de uma determinada classe seja criado                |
 
@@ -33,5 +33,5 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 | :art:           | Decorator     | Permite compor/decorar os parâmetros de forma dinâmica                         |
 | :package:        | Facade        | Promove o desacoplamento da implementação com vários clientes                  |
 | :leaves:         | Flyweight     | Minimiza o uso de custos computacionais compartilhando dados entre objetos     |
-| [:8ball:][24]          | [Proxy][48]         | Um objeto agente que encapsula o objeto que está realmente servindo            |
+| :8ball:          | Proxy         | Um objeto agente que encapsula o objeto que está realmente servindo            |
 
